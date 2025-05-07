@@ -84,3 +84,14 @@ return newArray.join(" ")
 console.log(capitalizeFirstLetter("Hello world"))
 
 //Find Longest Word
+function longestWords(word){
+  let wordSplit=word.split(" ");
+  for(let i=0;i<wordSplit.length;i++){
+    if(wordSplit[i].length>wordSplit[i+1].length){
+      return wordSplit[i];
+    }else{
+      return wordSplit[i+1];
+    }
+  }
+}
+console.log(longestWords("National Development fund"))
