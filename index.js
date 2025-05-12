@@ -224,3 +224,50 @@ const jane=new Student("Jane","Backend",[20,70,59,12])
 console.log(jane.getAverageScore());
 console.log(jane.isPassing());
 console.log(jane.totalScores());
+
+//Write a JavaScript function that accepts an argument and returns the type.
+
+function argumentType(arg){
+  return typeof(arg);
+}
+console.log(argumentType(34));
+console.log(argumentType("Hello"))
+
+//Write a JavaScript function which returns the n rows by n columns identity matrix.
+function matrix(n) {
+    // Initialize variables i and j for row and column indices
+    var i;
+    var j;
+
+    // Iterate through each row
+    for (i = 0; i < n; i++) {
+        // Iterate through each column
+        for (j = 0; j < n; j++) {
+            // Check if the current position is on the diagonal (i equals j)
+            if (i === j) {
+                // Print 1 if on the diagonal
+                console.log(' 1 ');
+            } else {
+                // Print 0 if not on the diagonal
+                console.log(' 0 ');
+            }
+        }
+        // Print a line of dashes to separate rows
+        console.log('----------');
+    }
+}
+
+// Call the matrix function with the parameter 4
+matrix(4); 
+
+
+//Write a JavaScript function that takes an array of numbers and finds the second lowest and second greatest numbers, respectively.
+
+function secondLowestGreatest(numbers){
+  let sortedNumbers=numbers.sort((a,b)=>a-b);
+  let number=[];
+  number.push(sortedNumbers[1]);
+  number.push(sortedNumbers[sortedNumbers.length-2]);
+  return number;
+}
+console.log(secondLowestGreatest([1,2,3,9,8]));
