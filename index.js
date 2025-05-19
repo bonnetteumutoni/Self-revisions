@@ -1,155 +1,155 @@
-// //Write a JavaScript function that reverses a number.
-// function numberReverse(number){
-//   let numSplit=number.toString().split("");
-//   let result=numSplit.reverse().join("");
-//   return result;
-// }
-// console.log(numberReverse(32456));
+//Write a JavaScript function that reverses a number.
+function numberReverse(number){
+  let numSplit=number.toString().split("");
+  let result=numSplit.reverse().join("");
+  return result;
+}
+console.log(numberReverse(32456));
 
-// function numRev(number){
-//     let revNum="";
-//     for(let i=0; i<number.toString().length;i++){
-//         revNum=number.toString()[i]+revNum;
-//     }
-//     return revNum
-// }
-// console.log(numRev(7634578));
+function numRev(number){
+    let revNum="";
+    for(let i=0; i<number.toString().length;i++){
+        revNum=number.toString()[i]+revNum;
+    }
+    return revNum
+}
+console.log(numRev(7634578));
 
-// //Write a JavaScript function that checks whether a passed string is a palindrome or not?
-// function palindrome(word){
-//     let wordRev="";
-//     for(let i=0;i<word.length;i++){
-//         wordRev=word[i]+wordRev;
-//     }
-//     if(wordRev===word){
-//         console.log("The word is palindrome")
-//     }else{
-//         console.log("The word is not palindrome")
-//     }
-// }
-// palindrome("mariam");
+//Write a JavaScript function that checks whether a passed string is a palindrome or not?
+function palindrome(word){
+    let wordRev="";
+    for(let i=0;i<word.length;i++){
+        wordRev=word[i]+wordRev;
+    }
+    if(wordRev===word){
+        console.log("The word is palindrome")
+    }else{
+        console.log("The word is not palindrome")
+    }
+}
+palindrome("mariam");
 
-// //Write a JavaScript function that generates all combinations of a string.
+//Write a JavaScript function that generates all combinations of a string.
 
-// //Example string : 'dog'
+//Example string : 'dog'
 
-// //Expected Output : d,do,dog,o,og,g
-
-
-
-// const posssibleCombination = (str)=>{
-//   let combination = [];
-//   for(let i =0;i<str.length;i++){
-//     for(let j=0; j<str.length+1;j++){
-//       combination.push(str.slice(i,j));
-//     }
-//   }
-//   const combinationSet= new Set(combination)
-//   return combinationSet;
-// }
-// console.log(posssibleCombination('Dog'))
+//Expected Output : d,do,dog,o,og,g
 
 
-// //factorial
-// function factorialOfNumber(number){
-//   if(number==0){
-//     console.log("Factorial is one");
-//   }else{
-//     let result=1;
-//     let i=1;
-//     while(i<=number){
-//       result*=i;
-//       i++
-//     }
-//     return `Factorial is ${result}`
-//   }
-// }
-// console.log(factorialOfNumber(13))
 
-// //Write a JavaScript function that returns a string that has letters in alphabetical order.
-// function alphabeticOrder(word){
-//   return word.toLowerCase().split("").sort().join("");
-// }
-// console.log(alphabeticOrder("webmaster"));
+const posssibleCombination = (str)=>{
+  let combination = [];
+  for(let i =0;i<str.length;i++){
+    for(let j=0; j<str.length+1;j++){
+      combination.push(str.slice(i,j));
+    }
+  }
+  const combinationSet= new Set(combination)
+  return combinationSet;
+}
+console.log(posssibleCombination('Dog'))
 
-// //Capitalize First Letter of Each Word
-// function capitalizeFirstLetter(word){
-//   let wordSplit=word.toLowerCase().split(" ");
-//   let newArray=[];
-//   for(let i=0;i<wordSplit.length;i++){
-//     newArray.push(wordSplit[i].at(0).toUpperCase()+wordSplit[i].slice(1).toLowerCase())
-//   }
-// return newArray.join(" ")
-// }
-// console.log(capitalizeFirstLetter("Hello world"))
 
-// //Find Longest Word
-// function longestWords(word){
-//   let wordSplit=word.split(" ");
-//   for(let i=0;i<wordSplit.length;i++){
-//     if(wordSplit[i].length>wordSplit[i+1].length){
-//       return wordSplit[i];
-//     }else{
-//       return wordSplit[i+1];
-//     }
-//   }
-// }
-// console.log(longestWords("National Development fund"));
-// //combine first name and lastname with space between
-// function combineNames(firstname,lastname){
-//   return firstname+" "+lastname;
-// }
-// console.log(combineNames("Anna","Jane"))
+//factorial
+function factorialOfNumber(number){
+  if(number==0){
+    console.log("Factorial is one");
+  }else{
+    let result=1;
+    let i=1;
+    while(i<=number){
+      result*=i;
+      i++
+    }
+    return `Factorial is ${result}`
+  }
+}
+console.log(factorialOfNumber(13))
+
+//Write a JavaScript function that returns a string that has letters in alphabetical order.
+function alphabeticOrder(word){
+  return word.toLowerCase().split("").sort().join("");
+}
+console.log(alphabeticOrder("webmaster"));
+
+//Capitalize First Letter of Each Word
+function capitalizeFirstLetter(word){
+  let wordSplit=word.toLowerCase().split(" ");
+  let newArray=[];
+  for(let i=0;i<wordSplit.length;i++){
+    newArray.push(wordSplit[i].at(0).toUpperCase()+wordSplit[i].slice(1).toLowerCase())
+  }
+return newArray.join(" ")
+}
+console.log(capitalizeFirstLetter("Hello world"))
+
+//Find Longest Word
+function longestWords(word){
+  let wordSplit=word.split(" ");
+  for(let i=0;i<wordSplit.length;i++){
+    if(wordSplit[i].length>wordSplit[i+1].length){
+      return wordSplit[i];
+    }else{
+      return wordSplit[i+1];
+    }
+  }
+}
+console.log(longestWords("National Development fund"));
+//combine first name and lastname with space between
+function combineNames(firstname,lastname){
+  return firstname+" "+lastname;
+}
+console.log(combineNames("Anna","Jane"))
 
 
 
 
 // //classessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-// // class Person {  constructor(name) { this.name = name; }
-// //   greet() { console.log(`Hello ${this.name}`); }
-// // }
-// // // inheriting parent class
-// // class Student extends Person {
-// // constructor(name) {
-// //         super(name);   // call the super class constructor and pass in the name parameter. Super refers to the parent class’s constructor   }
-// // }}
-// // let student1 = new Student('Jack');
-// // student1.greet();
+// class Person {  constructor(name) { this.name = name; }
+//   greet() { console.log(`Hello ${this.name}`); }
+// }
+// // inheriting parent class
+// class Student extends Person {
+// constructor(name) {
+//         super(name);   // call the super class constructor and pass in the name parameter. Super refers to the parent class’s constructor   }
+// }}
+// let student1 = new Student('Jack');
+// student1.greet();
 
 
-// class People{
-//   constructor(name,age,nationality){
-//     this.name=name;
-//     this.age=age;
-//     this.nationality=nationality;
-//   }
+class People{
+  constructor(name,age,nationality){
+    this.name=name;
+    this.age=age;
+    this.nationality=nationality;
+  }
 
-//   personalInformation(){
-//     console.log(`My name is ${this.name}, I am ${this.age} years old and my nationality is ${this.nationality}`);
-//   }}
+  personalInformation(){
+    console.log(`My name is ${this.name}, I am ${this.age} years old and my nationality is ${this.nationality}`);
+  }}
 
-//   class Citizen extends People{
-//        constructor(name,age,nationality){
-//         super(name,age,nationality);
-//        }
-//   }
-//  let citizen=new Citizen("Anna",34,"Rwandese")
-// citizen.personalInformation();
+  class Citizen extends People{
+       constructor(name,age,nationality){
+        super(name,age,nationality);
+       }
+  }
+ let citizen=new Citizen("Anna",34,"Rwandese")
+citizen.personalInformation();
 
 // //These are a way of creating objects using functions in JS. They act as blueprints and were used before the introduction of classes in ES6 2015. 
-// function Person(name, age) {
-//   this.name = name; // this refers to the object instance that will be created
-//   this.age = age;
-//   this.greet = function () { //object methods
-//         return ('Hi' + ' ' + this.name);
-//     }
-//     Person.prototype.name = 'Peter';
-//     Person.prototype.age = 23
-// }
-// const john = new Person('John', 30);
-// console.log(Person.prototype); 
-// Person.prototype.gender = 'male';
-// Person.prototype.age =  50;
+function Person(name, age) {
+  this.name = name; // this refers to the object instance that will be created
+  this.age = age;
+  this.greet = function () { //object methods
+        return ('Hi' + ' ' + this.name);
+    }
+    Person.prototype.name = 'Peter';
+    Person.prototype.age = 23
+}
+const john = new Person('John', 30);
+console.log(Person.prototype); 
+Person.prototype.gender = 'male';
+Person.prototype.age =  50;
 
 
 // // Create a constructor function Driver that takes in a driver's name, carModel, and rating.
