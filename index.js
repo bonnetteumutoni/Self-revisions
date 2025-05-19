@@ -290,3 +290,23 @@ function test_prime(n) {
   }
 }
 console.log(test_prime(10));
+
+// The first perfect number is 6, because 1, 2, and 3 are its proper positive divisors, and 1 + 2 + 3 = 6.
+//  Equivalently, the number 6 is equal to half the sum of all its positive divisors: ( 1 + 2 + 3 + 6 ) / 2 = 6. 
+// The next perfect number is 28 = 1 + 2 + 4 + 7 + 14. This is followed by the perfect numbers 496 and 8128.
+
+function perfectNumber(number){
+    let divisors=[];
+  for(let i=1;i<number;i++){
+    if(number%i==0){
+     divisors.push(i)
+    }
+  }
+  let res=divisors.reduce((item,acc)=>item+acc,0);
+  if(res==number && (res+number)/2==number){
+    console.log(`${number} is a perfect number`)
+  }else{
+    console.log(`${number} is not a perfect number`)
+  }
+}
+perfectNumber(18);
