@@ -1,0 +1,6 @@
+1.Create a list of objects with properties user id, medical records, current health status and appointment history
+2.create a function that takes in the the user id and the list of objects and iterate throught the list of objects
+3.If the  entered user id exist in the list of objects, return an object with medical records, current health status and appointment history 
+4. else display user not found
+5.create a function that takes in a new health metric and add it to the list of objects
+6.create a function that takes in appointment date and returns a string.
