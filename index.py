@@ -107,4 +107,20 @@ def not_poor(str1):
     else:
         return str1
 print(not_poor("World is not poor place to live on"))
- 
+
+# Develop a comprehensive disaster planning system that quickly allocates and deploys emergency resources in response to natural disasters or crises.
+# This system must coordinate with multiple agencies, manage logistics of supplies and personnel effectively, and adapt to rapidly changing conditions on the ground.
+# The goal is to maximize the efficiency of response efforts, cover essential needs promptly, and improve recovery times for affected communities.
+
+def disaster_planning(disaster):
+    key="emergency"
+    disasters=["fire","earthquake","floods"]
+    agencies={"fire":"Fire department","earthquake":"Earthquake agency","floods":"Flood department","emergency":"Emergency department"}
+    supplies={"fire":"Exstinguishers","earthquake":"First-aid","floods":"Life Jackets","emergency":"Oxygen masks"}
+    if disaster in disasters:
+        print(f"The disaster is {disaster} and agency is {agencies.get(disaster.lower())} and supplies are {supplies.get(disaster.lower())}")
+    else:
+        print(f"The disaster is {disaster} and agency is {agencies.get(key)} and supplies are {supplies.get(key)}")
+
+disaster_planning("fire")
+disaster_planning("Eruption")
