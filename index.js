@@ -309,7 +309,7 @@ function perfectNumber(number){
     console.log(`${number} is not a perfect number`)
   }
 }
-perfectNumber(18);
+perfectNumber(28);
 
 // Create a program for managing personal health data. Users should input their unique health identifier and be able to view their medical records, 
 // current health status, and appointment history. Additionally, 
