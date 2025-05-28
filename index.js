@@ -337,3 +337,42 @@ patients.checkDetails(10);
 patients.newMetrics("Blood pressure");
 patients.appointment("21st May");
 
+
+// You are creating a backend structure for an online course platform.
+//  Write a Student class that accepts name, course, and scores (an array of numbers) as arguments.
+// Add a method using Student.prototype called getAverageScore() that returns the average score.
+
+
+// Add another method called isPassing() that returns true if the average is 50 or more.c
+// Add another method called totalScores() that returns the total scores of the student.
+// Create two students and test all the methods.
+
+class Student{
+  constructor(name,course,scores){
+    this.name=name;
+    this.course=course;
+    this.scores=scores;
+  }
+  isPassing(){
+    if(this.getAverageScore()>=50){
+    console.log(this.getAverageScore())
+    return true
+    }
+  }
+totalScores(){
+  let totalScores=this.scores.reduce((item,acc)=>item+acc,0)
+  return totalScores
+}
+
+}
+Student.prototype.getAverageScore=function(){
+  let total=this.scores.reduce((item,acc)=>item+acc,0);
+  let average=total/this.scores.length;
+  return average;
+}
+
+const st1=new Student("Jane","Backend",[56,78,90]);
+console.log(st1.isPassing());
+console.log(st1.totalScores());
+console.log(st1.getAverageScore());
+
